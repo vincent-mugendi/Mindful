@@ -1,6 +1,6 @@
-CREATE DATABASE users_db;
+CREATE DATABASE mindful_users_db;
 
-USE users_db;
+USE mindful_users_db;
 
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
