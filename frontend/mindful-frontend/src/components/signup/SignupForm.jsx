@@ -17,7 +17,22 @@ const SignupForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Form submitted", formData);
+        
+        fetch('http://localhost:5000/api/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
     };
 
     return (
