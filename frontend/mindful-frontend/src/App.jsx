@@ -1,23 +1,18 @@
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { useState } from 'react';
 
-import Header from './components/header/header';
-import SignupForm from './components/signup/SignupForm';
+import Header from './components/header/Header.jsx';
+import LandingPage from './components/landing/Landing.jsx';
+import SignupForm from './components/signup/SignupForm.jsx';
 
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
+const App = () => (
     <Router>
-      <Header />
-      <Routes>
-        <Route path="/signup" element={<SignupForm />} />
-      </Routes>
-    
+        <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/signup" element={<SignupForm />} />
+            {/* Add other routes here */}
+        </Routes>
     </Router>
-  )
-}
+);
 
-export default App
+export default App;
