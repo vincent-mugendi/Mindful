@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const AssessmentIntro = () => {
     return (
@@ -17,8 +18,11 @@ const AssessmentIntro = () => {
         <br />
         <h5>Your responses are completely confidential and anonymous. We do not collect any personally identifiable information, and your data will not be shared with any third parties.</h5>
 
-        <h4>PLEASE NOTE</h4>
-        <h5>Please note that this self-assessment is not a diagnostic tool. It is intended for informational purposes only and should not be used as a substitute for professional diagnosis or treatment. If your results indicate a potential mental health issue, we strongly recommend consulting with a healthcare professional for a comprehensive evaluation and appropriate care.</h5>
+        <h4>PLEASE NOTE!!!</h4>
+        <h5>This self-assessment is not a diagnostic tool. It is intended for informational purposes only and should not be used as a substitute for professional diagnosis or treatment. If your results indicate a potential mental health issue, we strongly recommend consulting with a healthcare professional for a comprehensive evaluation and appropriate care.</h5>
+        
+
+        <Link to="/ps-section1"><button>NEXT</button></Link>
         </>
     )
 }

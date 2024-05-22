@@ -7,6 +7,11 @@ import SignupForm from './components/signup/SignupForm.jsx';
 import Dashboard from './components/dashboard/Dashboard.jsx';
 import LoginForm from './components/login/Login.jsx';
 import SelfAssessment from './components/self-assessment/Self_assessment.jsx';
+import PsSection1 from './components/self-assessment/personal_information/ps_section1.jsx';
+import PsSection2 from './components/self-assessment/personal_information/ps_section2.jsx';
+import PsSection3 from './components/self-assessment/personal_information/ps_section3.jsx';
+import PsSection4 from './components/self-assessment/personal_information/ps_section4.jsx';
+import PsSection5 from './components/self-assessment/personal_information/ps_section5.jsx';
 
 const App = () => (
     <Router>
@@ -16,6 +21,11 @@ const App = () => (
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/login" element={<LoginForm />} />
             <Route path="/selfassessment" element={<SelfAssessment />} />
+            <Route path="/ps-section1" element={<PsSection1 />} />
+            <Route path="/ps-section2" element={<PsSection2 />} />
+            <Route path="/ps-section3" element={<PsSection3 />} />
+            <Route path="/ps-section4" element={<PsSection4 />} />
+            <Route path="/ps-section5" element={<PsSection5 />} />
         </Routes>
     </Router>
 );
