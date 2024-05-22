@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate hook
 
 const SignupForm = () => {
     const [formData, setFormData] = useState({
@@ -6,6 +7,7 @@ const SignupForm = () => {
         email: "",
         password: ""
     });
+    const navigate = useNavigate(); // Initialize useNavigate hook
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -18,17 +20,28 @@ const SignupForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         
+        console.log('Submitting form with data:', formData);
+
         fetch('http://localhost:5000/api/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            
             body: JSON.stringify(formData)
         })
-        .then(response => response.json())
+        .then(response => {
+            console.log('Response status:', response.status);
+            return response.json();
+        })
         .then(data => {
-            console.log('Success:', data);
+            console.log('Response data:', data);
+            if (data.message === 'User registered successfully') {
+                console.log('Registration successful, navigating to dashboard...');
+                navigate('/dashboard');
+                console.log('Navigation to dashboard attempted');
+            } else {
+                console.log('Registration failed:', data);
+            }
         })
         .catch((error) => {
             console.error('Error:', error);
