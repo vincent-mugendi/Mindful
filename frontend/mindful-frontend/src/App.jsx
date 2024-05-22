@@ -12,6 +12,12 @@ import PsSection2 from './components/self-assessment/personal_information/ps_sec
 import PsSection3 from './components/self-assessment/personal_information/ps_section3.jsx';
 import PsSection4 from './components/self-assessment/personal_information/ps_section4.jsx';
 import PsSection5 from './components/self-assessment/personal_information/ps_section5.jsx';
+import MdsSection1 from './components/self-assessment/mental_disorder_screening/mds_section1.jsx';
+import MdsSection2 from './components/self-assessment/mental_disorder_screening/mds_section2.jsx';
+import MdsSection3 from './components/self-assessment/mental_disorder_screening/mds_section3.jsx';
+import MdsSection4 from './components/self-assessment/mental_disorder_screening/mds_section4.jsx';
+import MhfSection1 from './components/self-assessment/mental_health_fitness/mhf_section1.jsx';
+import MhfSection2 from './components/self-assessment/mental_health_fitness/mhf_section2.jsx';
 
 const App = () => (
     <Router>
@@ -26,6 +32,12 @@ const App = () => (
             <Route path="/ps-section3" element={<PsSection3 />} />
             <Route path="/ps-section4" element={<PsSection4 />} />
             <Route path="/ps-section5" element={<PsSection5 />} />
+            <Route path="/mds-section1" element={<MdsSection1 />} />
+            <Route path="/mds-section2" element={<MdsSection2 />} />
+            <Route path="/mds-section3" element={<MdsSection3 />} />
+            <Route path="/mds-section4" element={<MdsSection4 />} />
+            <Route path="/mhf-section1" element={<MhfSection1 />} />
+            <Route path="/mhf-section2" element={<MhfSection2 />} />
         </Routes>
     </Router>
 );

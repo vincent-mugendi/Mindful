@@ -21,7 +21,7 @@ const PsSection5 = () => {
         </form>
 
 
-        <Link to="/ps-section5"><button>NEXT</button></Link>
+        <Link to="/mds-section1"><button>NEXT</button></Link>
         </>
     )
 }
