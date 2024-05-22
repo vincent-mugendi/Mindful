@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Header from '../header/Header';
 
 const LoginForm = () => {
     const [formData, setFormData] = useState({ username: '', password: '' });
@@ -39,6 +40,8 @@ const LoginForm = () => {
     };
 
     return (
+        <>
+        <Header />
         <section>
             <form onSubmit={handleSubmit}>
                 <h2>Login</h2>
@@ -68,6 +71,7 @@ const LoginForm = () => {
                 </div>
             </form>
         </section>
+    </>
     );
 };
 

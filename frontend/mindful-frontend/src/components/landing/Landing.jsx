@@ -8,6 +8,7 @@ const LandingPage = () => {
     return (
         <>
         <Header />
+        <h1>Mindful Landing Page</h1>
         </>
     )
 }
