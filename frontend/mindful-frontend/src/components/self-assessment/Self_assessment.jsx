@@ -1,11 +1,12 @@
 import React from "react";
 import SelfAssesmentHeader from "../header/SelfAssessmentHeader";
+import AssessmentIntro from "./AssessmentIntro";
 
 const SelfAssessment = () => {
     return (
         <>
         <SelfAssesmentHeader />
-        <h1>BODY---</h1>
+        <AssessmentIntro />
         </>
     )
 }
