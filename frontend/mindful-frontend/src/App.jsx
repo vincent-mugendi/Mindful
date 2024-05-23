@@ -18,6 +18,7 @@ import MdsSection3 from './components/self-assessment/mental_disorder_screening/
 import MdsSection4 from './components/self-assessment/mental_disorder_screening/mds_section4.jsx';
 import MhfSection1 from './components/self-assessment/mental_health_fitness/mhf_section1.jsx';
 import MhfSection2 from './components/self-assessment/mental_health_fitness/mhf_section2.jsx';
+import FinalSubmission from './components/self-assessment/FinalSubmission.jsx';
 
 const App = () => (
     <Router>
@@ -38,6 +39,7 @@ const App = () => (
             <Route path="/mds-section4" element={<MdsSection4 />} />
             <Route path="/mhf-section1" element={<MhfSection1 />} />
             <Route path="/mhf-section2" element={<MhfSection2 />} />
+            <Route path="/finalsubmission" element={<FinalSubmission />} />
         </Routes>
     </Router>
 );

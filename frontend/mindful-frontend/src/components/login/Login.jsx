@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from '../header/Header';
+import Header from '../header/header';
 
 const LoginForm = () => {
     const [formData, setFormData] = useState({ username: '', password: '' });
