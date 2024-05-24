@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import { useAssessment } from '../../context/Assessmentcontext';
 
 const FinalSubmission = () => {
   const { answers, submitAnswers } = useAssessment();
   const [isLoading, setIsLoading] = useState(false);
   const [submissionError, setSubmissionError] = useState(null);
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -12,7 +14,7 @@ const FinalSubmission = () => {
     setSubmissionError(null); // Clear any previous error
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/api/submit-answers', { // Full URL specified
+      const response = await fetch('http://127.0.0.1:5000/api/submit-answers', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(answers),
@@ -24,7 +26,8 @@ const FinalSubmission = () => {
 
       const responseData = await response.json();
       console.log(responseData.message); // Display success message
-      // You can also display success message to user here (e.g., with toast)
+      // Redirect to action-plan after successful submission
+      navigate('/action-plan');
     } catch (error) {
       console.error('Error submitting answers:', error);
       setSubmissionError(error.message); // Set error message for display
