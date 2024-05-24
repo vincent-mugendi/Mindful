@@ -2,8 +2,8 @@ export const clusterData = {
   cluster1: {
     helplines: ["1-800-123-4567", "1-800-789-0123"],
     supportOrganizations: [
-      { name: "Young Adult Support Group", link: "http://supportgroup.com" },
-      { name: "Urban Mental Health Center", link: "http://mentalhealthcenter.com" }
+      { name: "Young Adult Support Group", link: "#" },
+      { name: "Urban Mental Health Center", link: "#" }
     ],
     mentalHealthSteps: [
       "Establish a routine with balanced activities.",
@@ -18,17 +18,17 @@ export const clusterData = {
     recommendedResources: [
       {
         name: "Books on managing anxiety for young adults",
-        link: "http://books.com",
+        link: "#",
         description: "A curated list of books to help manage anxiety."
       },
       {
         name: "Apps like Headspace for mindfulness",
-        link: "http://headspace.com",
+        link: "#",
         description: "Mindfulness and meditation app."
       },
       {
         name: "Local community events or groups",
-        link: "http://communityevents.com",
+        link: "#",
         description: "Find local events to engage with your community."
       }
     ]
