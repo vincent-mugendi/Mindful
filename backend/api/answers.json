@@ -1,1 +1,14 @@
-{}
+{
+    "age": "18-24",
+    "gender": "female",
+    "occupation": "self-employed",
+    "living-situation": "with-partner",
+    "living-situation-other": "",
+    "location": "kiambu",
+    "interest-level": "1",
+    "anxiety-level": "2",
+    "condition-period": "1",
+    "interference-level": "1",
+    "activity-level": "1",
+    "loneliness-level": "1"
+}

@@ -1,4 +1,3 @@
-// App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -22,7 +21,18 @@ import FinalSubmission from './components/self-assessment/FinalSubmission.jsx';
 import PersonalizedActionPlan from './components/action_plans/action_plan_template.jsx';
 
 const App = () => {
-  const user = { username: 'Jane Doe' };
+  const [username, setUsername] = React.useState('');
+
+  React.useEffect(() => {
+    // Fetch the username from the server or local storage
+    // Here we assume it's stored in local storage
+    const storedUsername = localStorage.getItem('username');
+    if (storedUsername) {
+        setUsername(storedUsername);
+    }
+  }, []);
+
+  const user = { username };
   const userCluster = 'cluster1';
 
   return (
