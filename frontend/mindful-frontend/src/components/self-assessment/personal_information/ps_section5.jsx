@@ -21,9 +21,8 @@ const PsSection5 = () => {
             {/* SECTION 5 */}
             <form>
                 <div>
-                    <label htmlFor="location">Location (County/Region):</label>
-                    {/* Use the 'location' name attribute instead of 'county' */}
-                    <input type="text" id="location" name="location" placeholder="Please specify your county" onChange={handleLocationChange}></input>
+                    <label htmlFor="location">What's your location? (County/Region):</label>
+                    <input type="text" id="location" name="location" placeholder="Please specify your location" onChange={handleLocationChange}></input>
                 </div>
             </form>
 

@@ -1,3 +1,5 @@
+// App.jsx
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -33,7 +35,6 @@ const App = () => {
   }, []);
 
   const user = { username };
-  const userCluster = 'cluster1';
 
   return (
     <Router>
@@ -55,7 +56,7 @@ const App = () => {
         <Route path="/mhf-section1" element={<MhfSection1 />} />
         <Route path="/mhf-section2" element={<MhfSection2 />} />
         <Route path="/finalsubmission" element={<FinalSubmission />} />
-        <Route path="/action-plan" element={<PersonalizedActionPlan user={user} userCluster={userCluster} />} />
+        <Route path="/action-plan" element={<PersonalizedActionPlan user={user} />} />
       </Routes>
     </Router>
   );

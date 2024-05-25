@@ -31,7 +31,7 @@ const MdsSection1 = () => {
                             value="0" 
                             onChange={handleInterestLevelChange}
                         />
-                        <label htmlFor="not-at-all">Not at all (0)</label>
+                        <label htmlFor="not-at-all">Not at all</label>
                     </div>
                     
                     <div>

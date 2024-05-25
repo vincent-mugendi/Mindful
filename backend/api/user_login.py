@@ -9,7 +9,7 @@ CORS(app, resources={r"/api/*": {"origins": "*"}})
 # Configure MySQL
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'qwertyupi5'
+app.config['MYSQL_PASSWORD'] = 'Purity@1974'
 app.config['MYSQL_DB'] = 'mindful_users_db'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 

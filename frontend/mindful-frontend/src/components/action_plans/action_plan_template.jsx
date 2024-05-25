@@ -1,8 +1,13 @@
+// action_plan_template.jsx
+
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import ActionPlanHeader from '../header/ActionPlanHeader';
 import { clusterData } from './cluster_data';
 
-const PersonalizedActionPlan = ({ user, userCluster }) => {
+const PersonalizedActionPlan = ({ user }) => {
+  const location = useLocation();
+  const { userCluster } = location.state || {};
   const cluster = clusterData[userCluster];
 
   if (!cluster) {

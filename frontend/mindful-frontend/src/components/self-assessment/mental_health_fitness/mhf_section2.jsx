@@ -36,23 +36,23 @@ const MhfSection2 = () => {
                     <div>
                         <input 
                             type="radio" 
-                            id="rarely" 
+                            id="sometimes" 
                             name="loneliness-level" 
                             value="1" 
                             onChange={handleLonelinessLevelChange}
                         />
-                        <label htmlFor="rarely">Rarely</label>
+                        <label htmlFor="sometimes">Yes, sometimes</label>
                     </div>
                     
                     <div>
                         <input 
                             type="radio" 
-                            id="sometimes" 
+                            id="rarely" 
                             name="loneliness-level" 
                             value="2" 
                             onChange={handleLonelinessLevelChange}
                         />
-                        <label htmlFor="sometimes">Yes, Sometimes</label>
+                        <label htmlFor="rarely">Rarely</label>
                     </div>
                     
                     <div>

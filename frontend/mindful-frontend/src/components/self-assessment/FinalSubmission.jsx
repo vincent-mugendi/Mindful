@@ -1,3 +1,5 @@
+// FinalSubmission.jsx
+
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import { useAssessment } from '../../context/Assessmentcontext';
@@ -26,8 +28,8 @@ const FinalSubmission = () => {
 
       const responseData = await response.json();
       console.log(responseData.message); // Display success message
-      // Redirect to action-plan after successful submission
-      navigate('/action-plan');
+      // Redirect to action-plan with the user cluster
+      navigate('/action-plan', { state: { userCluster: responseData.cluster } });
     } catch (error) {
       console.error('Error submitting answers:', error);
       setSubmissionError(error.message); // Set error message for display
