@@ -26,7 +26,7 @@ It provides an intergrated platform for self-assessment, education and connectio
 │   └── storage
 ├── frontend
 │   └── mindful-frontend
-└── structure.txt
+
 ```
 
 #### How to run
