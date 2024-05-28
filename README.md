@@ -27,3 +27,13 @@ It provides an intergrated platform for self-assessment, education and connectio
 │   └── mindful-frontend
 
 
+#### How to run
+- Clone application
+- install python
+- Create virtual environment
+- install packages required
+- run the app.py
+
+## AUTHORS
+- Vincent Mwathi
+- Fortunate Kio
