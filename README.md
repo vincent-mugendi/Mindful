@@ -18,12 +18,12 @@ It provides an intergrated platform for self-assessment, education and connectio
   - React
 
 ### Applicaction structure
-A[MINDFUL] --> B[backend];
-A --> C[frontend\mindful-frontend];
-A --> D[README.md];
-B --> E[api];
-B --> F[storage];
-C --> G[public];
-C --> H[src];
+.
+├── README.md
+├── backend
+│   ├── api
+│   └── storage
+├── frontend
+│   └── mindful-frontend
 
- -
+
