@@ -23,12 +23,27 @@ It provides an intergrated platform for self-assessment, education and connectio
 ├── README.md
 ├── backend
 │   ├── api
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   ├── answers.json
+│   │   ├── personalizer.py
+│   │   ├── submit_answers.py
+│   │   ├── user_login.py
+│   │   └── user_registration.py
 │   └── storage
+│       └── users_schema.sql
 ├── frontend
 │   └── mindful-frontend
+│       ├── README.md
+│       ├── index.html
+│       ├── node_modules
+│       ├── package-lock.json
+│       ├── package.json
+│       ├── public
+│       ├── src
+│       └── vite.config.js
 
 ```
-
 #### How to run
 - Clone application
 - install python
