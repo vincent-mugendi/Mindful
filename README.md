@@ -18,6 +18,7 @@ It provides an intergrated platform for self-assessment, education and connectio
   - React
 
 ### Applicaction structure
+```
 .
 ├── README.md
 ├── backend
@@ -25,7 +26,8 @@ It provides an intergrated platform for self-assessment, education and connectio
 │   └── storage
 ├── frontend
 │   └── mindful-frontend
-
+└── structure.txt
+```
 
 #### How to run
 - Clone application

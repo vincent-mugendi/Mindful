@@ -1,0 +1,10 @@
+.
+├── README.md
+├── backend
+│   ├── api
+│   └── storage
+├── frontend
+│   └── mindful-frontend
+└── structure.txt
+
+5 directories, 2 files
