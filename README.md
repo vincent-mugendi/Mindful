@@ -20,7 +20,6 @@ It provides an intergrated platform for self-assessment, education and connectio
 ### Applicaction structure
 ```
 .
-├── README.md
 ├── backend
 │   ├── api
 │   │   ├── __init__.py
@@ -42,7 +41,7 @@ It provides an intergrated platform for self-assessment, education and connectio
 │       ├── public
 │       ├── src
 │       └── vite.config.js
-
+└── README.md
 ```
 #### How to run
 - Clone application
