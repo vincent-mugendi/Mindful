@@ -1,70 +1,113 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+.signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 712px;
+    height: 511px;
+    background: linear-gradient(135deg, #6B8C6A 0%, #D99096 100%);
+    border-radius: 18px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 40px 40px 100px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-left: 30px;
+    margin-bottom: 5px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
     align-items: center;
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
-    width: 100%;
-    padding: 20px 0;
-    text-align: center;
+.header h2 {
+    color: black;
+    font-size: 25px;
 }
 
-section {
-    background-color: white;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
+.logo {
+    width: 102px;
+    height: auto;
 }
 
-form {
+.form-group {
     display: flex;
     flex-direction: column;
-}
-
-form h2 {
     margin-bottom: 20px;
-    color: #4CAF50;
-}
-
-form div {
-    margin-bottom: 15px;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    margin-left: 30px;
+    font-size: 20px;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 3px;
 }
 
 input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    margin-left: 30px;
+    width: 257px;
+    height: 25px;
+    color: black;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+    background-color: #C8C8C5;
+    border-radius: 8px;
+    outline: none;
+    padding: 8px;
 }
 
-button:hover {
-    background-color: #45a049;
+.signup  button {
+    margin-left: 30px;
+    margin-top: 10px;
+    color: #C8C8C5;
+    font-size: 20px;
+    background: #517F4E;
+    width: 137px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+.signup button:hover {
+    background: #405c3a;
+    color: #ffffff;
+}
+
+.footer {
+    font-size: 20px;
+    font-weight: 300;
+    margin-left: 30px;
+    margin-top: 0;
+}
+
+.footer p {
+    color: black;
+}
+
+.footer span {
+    font-weight: 400;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer a span:hover {
+    color: #21651d;
 }
