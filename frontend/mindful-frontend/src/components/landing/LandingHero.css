@@ -1,0 +1,23 @@
+.hero-spacer {
+    margin-top: 242px;
+}
+
+
+.hero-title {
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 0;
+    /* Adjust the margin as needed */
+}
+
+.hero-subtitle {
+    font-size: 64px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.hero-copy {
+    font-size: 25px;
+    font-weight: 200;
+    padding-left: 130px;
+}
