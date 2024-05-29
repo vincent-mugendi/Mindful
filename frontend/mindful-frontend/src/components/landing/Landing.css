@@ -1,4 +1,18 @@
 body {
-    background: linear-gradient(135deg, #FDFCFD 0%, #E2EBF0 50%, #BDC4C9 100%);
+    background-color: #F3E6E0;
     color: #333;
+    overflow-y: scroll;
+    height: 100vh;
+
+    /* Hide vertical scrollbar for Chrome, Safari, and Opera */
+    ::-webkit-scrollbar {
+        width: 0;
+        background: transparent;
+    }
+
+    /* Hide vertical scrollbar for IE, Edge, and Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
