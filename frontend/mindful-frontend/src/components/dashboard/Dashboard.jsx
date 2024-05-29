@@ -17,8 +17,8 @@ const Dashboard = () => {
 
     return (
         <div>
-            <Dashboardheader username={username} />
-            <DashboardWelcome />
+            <Dashboardheader />
+            <DashboardWelcome username={username} />
             <h1>Dashboard Content</h1>
             <Link to="/selfassessment">Self Assessment</Link>
         </div>
