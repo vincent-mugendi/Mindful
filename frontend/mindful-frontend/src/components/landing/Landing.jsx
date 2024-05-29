@@ -8,6 +8,7 @@ import LandingPromise from "./LandingPromise";
 import LandingMission from "./LandingMission";
 import LandingHowItWorks from "./LandingHowItWorks";
 import LandingTestimonials from "./LandingTestimonials";
+import LandingLastCTA from "./LandingLastCTA";
 
 const LandingPage = () => {
     return (
@@ -18,6 +19,7 @@ const LandingPage = () => {
         <LandingMission />
         <LandingHowItWorks />
         <LandingTestimonials />
+        <LandingLastCTA />
         </>
     )
 }

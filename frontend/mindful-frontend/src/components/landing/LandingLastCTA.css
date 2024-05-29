@@ -1,0 +1,64 @@
+.last-cta {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.last-cta a {
+    text-decoration: none;
+}
+
+.last-cta h3 {
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 20px;
+    /* Add space between the heading and the button */
+}
+
+.last-cta-btn {
+    display: flex;
+    justify-content: center;
+    /* Center the button horizontally */
+}
+
+.register-btn {
+    text-decoration: none;
+    /* Remove underline */
+    display: flex;
+    align-items: center;
+    font-family: 'josefin-sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: 1px solid #6B8C6A;
+    border-radius: 18px;
+    background: none;
+    transition: color 0.3s, background-image 0.3s;
+    cursor: pointer;
+}
+
+.register-btn img {
+    margin-left: 10px;
+    transform: rotate(-45deg);
+}
+
+.register-btn:hover {
+    color: white;
+    background-image: linear-gradient(45deg, #4B6CB7, #7FC8CC, #4B6CB7);
+    background-size: 200% 200%;
+    animation: soothingGradient 3s ease infinite;
+}
+
+@keyframes soothingGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
