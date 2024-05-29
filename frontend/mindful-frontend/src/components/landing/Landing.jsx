@@ -5,6 +5,7 @@ import Header from "../header/Header";
 import './Landing.css'
 import LandingHero from "./LandingHero";
 import LandingPromise from "./LandingPromise";
+import LandingMission from "./LandingMission";
 
 const LandingPage = () => {
     return (
@@ -12,6 +13,7 @@ const LandingPage = () => {
         <Header />
         <LandingHero />
         <LandingPromise />
+        <LandingMission />
         </>
     )
 }

@@ -1,0 +1,66 @@
+.mission {
+    margin-left: 130px;
+}
+
+.mission h3 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.mission p {
+    font-size: 25px;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+/* Add styles for .our-story */
+.our-story {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.our-story a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.our-story a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: black;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.our-story a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.our-story a:hover {
+    color: #6B8C6A;
+    /* Change color on hover */
+}
+
+@media (max-width: 768px) {
+    .our-story {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .our-story a {
+        margin-bottom: 10px;
+        width: auto;
+    }
+}
