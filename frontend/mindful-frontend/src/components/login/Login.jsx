@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from '../header/Header';
+
+import './Login.css';
+import { Link } from 'react-router-dom';
+import logo from "../../assets/logo.png";
+
 
 const LoginForm = () => {
     const [formData, setFormData] = useState({ username: '', password: '' });
@@ -41,40 +45,55 @@ const LoginForm = () => {
 
     return (
         <>
-        <Header />
-        <section>
-            <form onSubmit={handleSubmit}>
-                <h2>Login</h2>
-                <div>
-                    <label htmlFor="username">Username:</label>
-                    <input
-                        type="text"
-                        id="username"
-                        name="username"
-                        value={formData.username}
-                        onChange={handleChange}
-                    />
+            <div className="login-form-container">
+                <div className="login-card">
+                    
+                    <div className='header'>
+                        <h2>Welcome to Mindful</h2>
+                        <Link to="/">
+                            <img className="logo" src={logo} alt="mindful logo" />
+                        </Link>
+                    </div>
+
+
+                    <form onSubmit={handleSubmit}>
+                        <div className="login-form-group">
+                            <label htmlFor="username">Username:</label>
+                            <input
+                                type="text"
+                                id="username"
+                                name="username"
+                                value={formData.username}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <div className="login-form-group">
+                            <label htmlFor="password">Password:</label>
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                value={formData.password}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        {error && <p className="login-error">{error}</p>}
+                        <div>
+                            <button type="submit" className="login-button">Login</button>
+                        </div>
+                    </form>
+
+                    <div className="footer">
+                    <Link to="/signup">
+                    <p>
+                        Don't have an account? <span style={{ fontWeight: 'bold' }}>Create One Here</span>
+                    </p>
+                    </Link>
                 </div>
-                <div>
-                    <label htmlFor="password">Password:</label>
-                    <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        value={formData.password}
-                        onChange={handleChange}
-                    />
                 </div>
-                {error && <p style={{ color: 'red' }}>{error}</p>}
-                <div>
-                    <button type="submit">Login</button>
-                </div>
-            </form>
-        </section>
-    </>
+            </div>
+        </>
     );
 };
 
 export default LoginForm;
-
-
