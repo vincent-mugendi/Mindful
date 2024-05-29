@@ -52,6 +52,10 @@
     padding-left: 411px;
 }
 
+.register-0 a {
+    text-decoration: none;
+}
+
 .register-btn:hover {
     color: white;
     background-image: linear-gradient(45deg, #4B6CB7, #7FC8CC, #4B6CB7);
