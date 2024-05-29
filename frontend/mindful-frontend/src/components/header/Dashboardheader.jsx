@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import './DashboardHeader.css';
 
-const Dashboardheader = () => {
+const DashboardHeader = () => {
     const navigate = useNavigate();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -21,12 +21,12 @@ const Dashboardheader = () => {
     return (
         <header>
             <div className="dashboard-header">
-                <nav>
-                    <Link to="/dashboard"><img className="logo" src={logo} alt="mindful logo" /></Link>
+                <nav className="dashboard-nav">
+                    <Link to="/dashboard"><img className="dashboard-logo" src={logo} alt="mindful logo" /></Link>
                     <button className="menu-toggle" onClick={toggleMenu}>
-                        &#9776;
+                        {isMenuOpen ? 'Close' : 'Menu'}
                     </button>
-                    <ul className={`navbar ${isMenuOpen ? 'open' : ''}`}>
+                    <ul className={`dashboard-navbar ${isMenuOpen ? 'open' : ''}`}>
                         <li><a href="#">I need Help</a></li>
                         <li><a href="#">Learn</a></li>
                         <li>
@@ -42,4 +42,4 @@ const Dashboardheader = () => {
     );
 };
 
-export default Dashboardheader;
+export default DashboardHeader;

@@ -1,3 +1,4 @@
+
 .welcome h1 {
     font-size: 25px;
     font-weight: 700;
@@ -9,6 +10,7 @@
     font-weight: 400;
     margin-top: 5px;
 }
+
 
 .welcome .assessment {
     margin-left: 130px;
@@ -37,46 +39,33 @@
     border: 1px solid #0CC229;
     border-radius: 18px;
     background: none;
-    transition: color 0.3s, border-color 0.3s;
-    /* Modify transition to include border-color */
+    transition: color 0.3s, background-image 0.3s;
     cursor: pointer;
-    position: relative;
-    /* Add position relative for pseudo-element */
-}
-
-.assessment .btn::before {
-    /* Add pseudo-element for the border animation */
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    right: -1px;
-    bottom: -1px;
-    border-radius: 18px;
-    border: 1px solid transparent;
-    /* Transparent border to start */
-    transition: border-color 0.3s;
-    /* Only animate border-color */
-    z-index: -1;
-    /* Behind the button content */
-}
-
-.assessment .btn:hover::before {
-    border-color: #0CC229;
-    /* Change border-color on hover */
 }
 
 .assessment .btn img {
     margin-left: 10px;
 }
 
-/* Remove hover effect on background */
+
+
 .assessment .btn:hover {
-    color: inherit;
-    background-image: none;
+    color: white;
+    background-image: linear-gradient(45deg, #4B6CB7, #7FC8CC, #4B6CB7);
+    background-size: 200% 200%;
+    animation: soothingGradient 3s ease infinite;
 }
 
-/* Remove animation on background */
 @keyframes soothingGradient {
-    /* Empty keyframes */
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }

@@ -3,22 +3,28 @@
     box-sizing: border-box;
     padding: 10px;
     border-bottom: 1px solid #000;
+    display: flex;
 }
 
-.dashboard-header nav {
+.dashboard-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
     width: 100%;
+    height: 60px;
+    /* Add a height to contain the navbar */
     position: relative;
+    /* Change to relative positioning */
 }
 
-.dashboard-header .logo {
+.dashboard-logo {
     width: 100px;
     height: auto;
+    flex-shrink: 0;
 }
 
-.dashboard-header .menu-toggle {
+.menu-toggle {
     display: none;
     background: none;
     border: none;
@@ -27,26 +33,25 @@
     z-index: 2;
 }
 
-.dashboard-header .navbar {
+.dashboard-navbar {
     list-style: none;
     display: flex;
     gap: 7px;
     margin: 0;
     padding: 0;
     flex-shrink: 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: white;
+    /* position: absolute; Remove absolute positioning */
+    /* top: 100%; Remove absolute positioning */
+    /* left: 0; Remove absolute positioning */
+    /* width: 100%; Remove absolute positioning */
     z-index: 1;
 }
 
-.dashboard-header .navbar li {
+.dashboard-navbar li {
     display: inline;
 }
 
-.dashboard-header .navbar a {
+.dashboard-navbar a {
     position: relative;
     text-decoration: none;
     color: #333;
@@ -57,7 +62,7 @@
     white-space: nowrap;
 }
 
-.dashboard-header .navbar a::after {
+.dashboard-navbar a::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -70,55 +75,35 @@
     transition: transform 0.3s ease;
 }
 
-.dashboard-header .navbar a:hover::after {
+.dashboard-navbar a:hover::after {
     transform: scaleX(1);
 }
 
 @media (max-width: 768px) {
-    .dashboard-header nav {
+    .dashboard-nav {
         flex-direction: row;
-        justify-content: space-between;
         align-items: center;
     }
 
-    .dashboard-header .menu-toggle {
-        display: block;
+    .dashboard-navbar {
+        flex-direction: row;
+        gap: 10px;
+        width: auto;
+        position: static;
+        /* Reset position */
+        top: auto;
+        /* Reset position */
+        left: auto;
+        /* Reset position */
     }
 
-    .dashboard-header .navbar {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        gap: 0;
-        margin-top: 10px;
+    .dashboard-navbar li {
+        width: auto;
     }
 
-    .dashboard-header .navbar.open {
-        display: flex;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        z-index: 1;
-        background-color: rgb(255, 255, 255);
-    }
-
-    .dashboard-header .navbar li {
-        width: 100%;
-    }
-
-    .dashboard-header .navbar a {
-        display: block;
-        width: 100%;
+    .dashboard-navbar a {
+        display: inline;
+        width: auto;
         text-align: left;
-        padding: 10px 20px;
-    }
-
-    .dashboard-header .navbar a:hover {
-        background-color: transparent;
-    }
-
-    .dashboard-header .navbar a:hover::after {
-        transform: scaleX(1);
     }
 }
