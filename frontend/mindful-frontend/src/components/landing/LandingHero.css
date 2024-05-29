@@ -60,6 +60,10 @@
 }
 
 
+.transition {
+    margin-top: 70px;
+    padding-left: 130px;
+}
 .transition img {
     opacity: 50%;
     width: 70px;

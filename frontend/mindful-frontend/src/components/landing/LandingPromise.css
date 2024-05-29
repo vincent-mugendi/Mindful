@@ -1,0 +1,113 @@
+.title {
+    margin-top: 70px;
+    padding-left: 130px;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+
+/* Promise 1 */
+
+.promise-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: last baseline;
+    /* Align items at the start of the cross axis */
+}
+
+.promise-1 :empty {
+    flex: 1;
+    margin-right: 400px;
+    /* Let the empty section grow to fill the space */
+}
+
+.promise-1 #number {
+    font-size: 100px;
+    margin-right: 0;
+    /* Add space between number and title/paragraph */
+}
+
+.promise-1 #promise-title {
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+.promise-1 p {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+
+
+/* Promise 2 */
+.promise-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: last baseline;
+}
+
+.promise-2 .empty {
+    flex: 1;
+}
+
+.promise-2 #number-2 {
+    font-size: 100px;
+    margin-right: 0;
+}
+
+.promise-2 #promise-title {
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+.promise-2 p {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.promise-2 .last {
+    width: 300px;
+}
+
+
+
+/* Promise 3 */
+.promise-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: last baseline;
+    /* Align items at the start of the cross axis */
+}
+
+.promise-3 :empty {
+    flex: 1;
+    margin-right: 400px;
+    /* Let the empty section grow to fill the space */
+}
+
+.promise-3 #number {
+    font-size: 100px;
+    margin-right: 0;
+    /* Add space between number and title/paragraph */
+}
+
+.promise-3 #promise-title {
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+.promise-3 p {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+
+
+
+
