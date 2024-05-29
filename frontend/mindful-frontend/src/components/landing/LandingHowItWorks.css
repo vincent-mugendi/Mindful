@@ -1,0 +1,166 @@
+.how-it-works {
+    margin-left: 130px;
+}
+
+
+
+.separator {
+    border: 0;
+    width: 50px;
+    height: 10px;
+    background: #333;
+    margin-bottom: 20px;
+    margin-top: 70px;
+}
+
+
+
+.main {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.main-msg {
+    font-size: 25px;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+
+/* Step A */
+
+.step-a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: last baseline;
+}
+
+.step-a :empty {
+    flex: 1;
+    margin-right: 270px;
+}
+
+.step-a #letter {
+    font-size: 100px;
+    margin-right: 0;
+}
+
+.step-a #step-title {
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+.step-a p {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+
+
+/* Step B */
+.step-b {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: last baseline;
+}
+
+.step-b .empty {
+    flex: 1;
+}
+
+.step-b #letter-2 {
+    font-size: 100px;
+    margin-right: 0;
+}
+
+.step-b #step-title {
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+.step-b p {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.step-b .last {
+    width: 300px;
+}
+
+
+
+/* Step C */
+.step-c {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: last baseline;
+    margin-bottom: 0;
+}
+
+.step-c :empty {
+    flex: 1;
+    margin-right: 270px;
+}
+
+.step-c #letter {
+    font-size: 100px;
+    margin-right: 0;
+}
+
+.step-c #step-title {
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+.step-c p {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+
+/* Call To Action */
+.register-btn {
+    font-family: 'josefin-sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px;
+    border: 1px solid #6B8C6A;
+    border-radius: 18px;
+    background: none;
+    transition: color 0.3s, background-image 0.3s;
+    cursor: pointer;
+    margin-top: 0;
+}
+
+.register-0 {
+    margin-top: 0;
+    padding-left: 330px;
+}
+
+.register-btn:hover {
+    color: white;
+    background-image: linear-gradient(45deg, #4B6CB7, #7FC8CC, #4B6CB7);
+    background-size: 200% 200%;
+    animation: soothingGradient 3s ease infinite;
+}
+
+
+.transition {
+    margin-top: 70px;
+    padding-left: 130px;
+}
+
+.transition img {
+    opacity: 50%;
+    width: 70px;
+    height: 70px;
+    transform: rotate(45deg);
+}

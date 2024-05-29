@@ -12,6 +12,7 @@ const Header = () => {
                 
                 <ul className="navbar">
                     <li><a href="#">I need Help</a></li>
+                    <li><a href="#">Learn</a></li>
                     <li><a href="#">Our Story</a></li>
                     <li><Link to="/signup">Sign Up</Link></li>
                     <li><Link to="/login">Log In</Link></li>

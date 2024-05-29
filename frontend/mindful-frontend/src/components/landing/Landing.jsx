@@ -6,6 +6,7 @@ import './Landing.css'
 import LandingHero from "./LandingHero";
 import LandingPromise from "./LandingPromise";
 import LandingMission from "./LandingMission";
+import LandingHowItWorks from "./LandingHowItWorks";
 
 const LandingPage = () => {
     return (
@@ -14,6 +15,7 @@ const LandingPage = () => {
         <LandingHero />
         <LandingPromise />
         <LandingMission />
+        <LandingHowItWorks />
         </>
     )
 }

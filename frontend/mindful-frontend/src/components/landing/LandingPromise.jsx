@@ -45,7 +45,7 @@ const LandingPromise = () => {
         </section>
 
 
-        {/* First Mindful Promise */}
+        {/* Third Mindful Promise */}
         <section className="promise-3">
             <div className="empty"></div>
             
