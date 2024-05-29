@@ -8,7 +8,6 @@
 /* Styling the card */
 .card {
     width: 712px;
-    height: 511px;
     background: linear-gradient(135deg, #6B8C6A 0%, #D99096 100%);
     border-radius: 18px;
     padding: 20px;
@@ -74,19 +73,19 @@ button:hover {
     margin-top: 0;
 }
 
-.footer p {
+.login-card .footer p {
     color: black;
 }
 
-.footer span {
+.login-card .footer span {
     font-weight: 400;
 }
 
-.footer a {
+.login-card .footer a {
     text-decoration: none;
 }
 
-.footer a span:hover {
+.login-card .footer a span:hover {
     color: #21651d;
 }
 
@@ -100,7 +99,7 @@ button:hover {
 
 .login-card {
     width: 712px;
-    height: 511px;
+    height: 530px;
     background: linear-gradient(135deg, #6B8C6A 0%, #D99096 100%);
     border-radius: 18px;
     padding: 20px;
@@ -160,5 +159,7 @@ button:hover {
 }
 
 .login-error {
-    color: red;
+    margin-left: 30px;
+    font-size: 25px;
+    color: rgb(173, 10, 10);
 }
