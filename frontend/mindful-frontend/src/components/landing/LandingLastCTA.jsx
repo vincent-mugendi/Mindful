@@ -7,7 +7,7 @@ import arrowIcon from "../../assets/icons/arrow-0.svg";
 const LandingLastCTA = () => {
     return (
         <div className="last-cta">
-            <h3>Ready to take the first step towards better mental health?</h3>
+            <h3>Ready to take that first step towards better mental health?</h3>
 
             {/* Call to Action */}
             <div className="last-cta-btn">

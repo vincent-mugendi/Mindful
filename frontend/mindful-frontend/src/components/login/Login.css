@@ -35,7 +35,7 @@
 .login-card input {
     margin-left: 30px;
     width: 257px;
-    height: 39px;
+    height: 25px;
     color: black;
     border: none;
     background-color: #C8C8C5;
@@ -131,7 +131,7 @@
 
 .login-form-group input {
     width: 257px;
-    height: 39px;
+    height: 25px;
     color: black;
     border: none;
     background-color: #C8C8C5;

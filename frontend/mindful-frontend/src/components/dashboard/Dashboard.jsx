@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Dashboardheader from '../header/Dashboardheader';
 import { Link } from "react-router-dom";
+import DashboardWelcome from './DashboardWelcome';
 
 const Dashboard = () => {
     const [username, setUsername] = useState('');
@@ -17,6 +18,7 @@ const Dashboard = () => {
     return (
         <div>
             <Dashboardheader username={username} />
+            <DashboardWelcome />
             <h1>Dashboard Content</h1>
             <Link to="/selfassessment">Self Assessment</Link>
         </div>
