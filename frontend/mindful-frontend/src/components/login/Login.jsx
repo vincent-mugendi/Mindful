@@ -49,7 +49,7 @@ const LoginForm = () => {
                 <div className="login-card">
                     
                     <div className='header'>
-                        <h2>Welcome to Mindful</h2>
+                        <h2>Welcome back</h2>
                         <Link to="/">
                             <img className="logo" src={logo} alt="mindful logo" />
                         </Link>
