@@ -21,3 +21,48 @@
     font-weight: 200;
     padding-left: 130px;
 }
+
+@keyframes soothingGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.register-btn {
+    font-family: 'josefin-sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px;
+    border: 1px solid #6B8C6A;
+    border-radius: 18px;
+    background: none;
+    transition: color 0.3s, background-image 0.3s;
+    cursor: pointer;
+}
+
+.register-0 {
+    padding-left: 411px;
+}
+
+.register-btn:hover {
+    color: white;
+    background-image: linear-gradient(45deg, #4B6CB7, #7FC8CC, #4B6CB7);
+    background-size: 200% 200%;
+    animation: soothingGradient 3s ease infinite;
+}
+
+
+.transition img {
+    opacity: 50%;
+    width: 70px;
+    height: 70px;
+    transform: rotate(45deg);
+}
