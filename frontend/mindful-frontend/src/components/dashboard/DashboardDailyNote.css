@@ -1,0 +1,19 @@
+.note {
+    margin-top: 50px;
+}
+
+.note h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.note p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.note #author {
+    font-size: 18px;
+    font-weight: 400;
+
+}
