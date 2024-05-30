@@ -1,4 +1,13 @@
 {
-    "activity-level": "0",
+    "age": "25-34",
+    "gender": "female",
+    "occupation": "self-employed",
+    "living-situation": "with-partner",
+    "living-situation-other": "",
+    "location": "kisume",
+    "interest-level": "1",
+    "anxiety-level": "2",
+    "condition-period": "2",
+    "activity-level": "1",
     "loneliness-level": "2"
 }
