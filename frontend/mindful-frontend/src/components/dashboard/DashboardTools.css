@@ -1,3 +1,53 @@
 .tools {
     margin-top: 100px;
 }
+
+
+.tools-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+#card1,
+#card2,
+#card3 {
+    width: 177px;
+    height: 120px;
+    border-radius: 18px;
+    transition: transform 0.3s;
+}
+
+#card1:hover,
+#card2:hover,
+#card3:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#card1 {
+    background-color: #AEBAE8;
+}
+
+#card2 {
+    background-color: #E5D183;
+}
+
+#card3 {
+    background-color: #97BFB4;
+}
+
+.tools-cards h4 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.tools-cards img {
+    width: 40px;
+    margin-left: 20px;
+    opacity: 60%;
+}
+
+#card3 img {
+    width: 31px;
+}
