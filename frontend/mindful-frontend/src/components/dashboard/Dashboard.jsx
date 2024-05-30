@@ -3,6 +3,7 @@ import Dashboardheader from '../header/Dashboardheader';
 import DashboardWelcome from './DashboardWelcome';
 import DashboardDailyNote from './DashboardDailyNote';
 import DashboardTools from './DashboardTools';
+import DashboardActionCenter from './DashboardActionCenter';
 
 const Dashboard = () => {
     const [username, setUsername] = useState('');
@@ -22,6 +23,7 @@ const Dashboard = () => {
             <DashboardWelcome username={username} />
             <DashboardDailyNote />
             <DashboardTools />
+            <DashboardActionCenter />
         </div>
     );
 };
