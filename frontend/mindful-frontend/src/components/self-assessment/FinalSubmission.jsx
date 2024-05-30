@@ -1,22 +1,23 @@
 // FinalSubmission.jsx
 
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
 import { useAssessment } from '../../context/Assessmentcontext';
 
 import './Assessment.css';
 import SelfAssesmentHeader from "../header/SelfAssessmentHeader";
+import ScreenLoader from "../screenloader/ScreenLoader.jsx"
 
 const FinalSubmission = () => {
   const { answers, submitAnswers } = useAssessment();
   const [isLoading, setIsLoading] = useState(false);
   const [submissionError, setSubmissionError] = useState(null);
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     setIsLoading(true);
-    setSubmissionError(null); // Clear any previous error
+    setSubmissionError(null);
 
     try {
       const response = await fetch('http://127.0.0.1:5000/api/submit-answers', {
@@ -30,33 +31,39 @@ const FinalSubmission = () => {
       }
 
       const responseData = await response.json();
-      console.log(responseData.message); // Display success message
-      // Redirect to action-plan with the user cluster
-      navigate('/action-plan', { state: { userCluster: responseData.cluster } });
+      console.log(responseData.message);
+
+      // Delay for 3 seconds before navigating to the action plan
+      setTimeout(() => {
+        navigate('/action-plan', { state: { userCluster: responseData.cluster } });
+      }, 3000); // 3 seconds delay
     } catch (error) {
       console.error('Error submitting answers:', error);
-      setSubmissionError(error.message); // Set error message for display
-    } finally {
+      setSubmissionError(error.message);
       setIsLoading(false);
     }
   };
 
   useEffect(() => {
-    // Optional: Reset error state after a delay (e.g., for temporary display)
-    const timeoutId = setTimeout(() => setSubmissionError(null), 5000); // 5 seconds
+    const timeoutId = setTimeout(() => setSubmissionError(null), 5000);
     return () => clearTimeout(timeoutId);
   }, [submissionError]);
 
   return (
     <div className="assessment-sections">
-      {/* Header */}
-      <SelfAssesmentHeader />
-      <h4>Review Your Answers</h4>
-      <pre>{JSON.stringify(answers, null, 2)}</pre>
-      <button onClick={handleSubmit} disabled={isLoading}>
-        {isLoading ? 'Submitting...' : 'Submit'}
-      </button>
-      {submissionError && <p className="error-message">{submissionError}</p>}
+      {isLoading ? (
+        <ScreenLoader /> // Show loader when isLoading is true
+      ) : (
+        <>
+          <SelfAssesmentHeader />
+          <h4>Review Your Answers</h4>
+          <pre>{JSON.stringify(answers, null, 2)}</pre>
+          <button onClick={handleSubmit} disabled={isLoading}>
+            Submit
+          </button>
+          {submissionError && <p className="error-message">{submissionError}</p>}
+        </>
+      )}
     </div>
   );
 };

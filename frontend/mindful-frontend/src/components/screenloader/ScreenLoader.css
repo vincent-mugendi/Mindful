@@ -1,8 +1,21 @@
+/* ScreenLoader.css */
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Optional: to cover the background */
+}
+
 .loader {
     font-size: 2em;
     font-family: 'Josefin Sans', sans-serif;
     color: #0CC229;
     text-align: center;
-    margin-top: 20%;
     transition: all 0.1s ease;
 }

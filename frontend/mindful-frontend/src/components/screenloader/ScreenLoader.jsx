@@ -1,5 +1,7 @@
+// ScreenLoader.jsx
+
 import React, { useEffect, useState } from "react";
-import "./ScreenLoader.css";  // Ensure this file is created and styled
+import "./ScreenLoader.css";
 
 const ScreenLoader = () => {
     const [text, setText] = useState("mindful");
@@ -23,14 +25,16 @@ const ScreenLoader = () => {
                     setAdding(true);
                 }
             }
-        }, 150);  // Interval duration set to 100ms
+        }, 100); // Interval duration set to 100ms
 
         return () => clearInterval(interval);
     }, [index, adding, text.length]);
 
     return (
-        <div className="loader">
-            {text}
+        <div className="loader-container">
+            <div className="loader">
+                {text}
+            </div>
         </div>
     );
 }
