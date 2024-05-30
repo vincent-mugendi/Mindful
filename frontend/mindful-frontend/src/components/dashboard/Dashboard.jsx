@@ -4,6 +4,7 @@ import DashboardWelcome from './DashboardWelcome';
 import DashboardDailyNote from './DashboardDailyNote';
 import DashboardTools from './DashboardTools';
 import DashboardActionCenter from './DashboardActionCenter';
+import LandingFooter from "../landing/LandingFooter";
 
 const Dashboard = () => {
     const [username, setUsername] = useState('');
@@ -24,6 +25,7 @@ const Dashboard = () => {
             <DashboardDailyNote />
             <DashboardTools />
             <DashboardActionCenter />
+            <LandingFooter />
         </div>
     );
 };
