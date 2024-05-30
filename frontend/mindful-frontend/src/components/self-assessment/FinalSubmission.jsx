@@ -1,12 +1,11 @@
-// FinalSubmission.jsx
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAssessment } from '../../context/Assessmentcontext';
 
+import './FinalSubmission.css'
 import './Assessment.css';
 import SelfAssesmentHeader from "../header/SelfAssessmentHeader";
-import ScreenLoader from "../screenloader/ScreenLoader.jsx"
+import ScreenLoader from "../screenloader/ScreenLoader.jsx";
 
 const FinalSubmission = () => {
   const { answers, submitAnswers } = useAssessment();
@@ -57,7 +56,14 @@ const FinalSubmission = () => {
         <>
           <SelfAssesmentHeader />
           <h4>Review Your Answers</h4>
-          <pre>{JSON.stringify(answers, null, 2)}</pre>
+          <div className="answers-list">
+            {Object.entries(answers).map(([question, answer], index) => (
+              <div key={index} className="answer-item">
+                <p><strong>{question}</strong></p>
+                <p>{answer}</p>
+              </div>
+            ))}
+          </div>
           <button onClick={handleSubmit} disabled={isLoading}>
             Submit
           </button>

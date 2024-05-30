@@ -1,1 +1,6 @@
-{}
+{
+    "condition-period": "1",
+    "interference-level": "2",
+    "activity-level": "2",
+    "loneliness-level": "3"
+}
