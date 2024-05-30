@@ -1,11 +1,11 @@
 // action_plan_template.jsx
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import ActionPlanHeader from '../header/ActionPlanHeader';
 import { clusterData } from './cluster_data';
 
-import '../self-assessment/Assessment.css';
+import './ActionPlan.css';
 import LandingFooter from '../landing/LandingFooter';
 
 const PersonalizedActionPlan = ({ user }) => {
@@ -13,12 +13,23 @@ const PersonalizedActionPlan = ({ user }) => {
   const { userCluster } = location.state || {};
   const cluster = clusterData[userCluster];
 
+  const [completedSteps, setCompletedSteps] = useState({});
+  const [completedStrategies, setCompletedStrategies] = useState({});
+
   if (!cluster) {
     return <p>Loading...</p>;
   }
 
+  const toggleStepCompletion = (index) => {
+    setCompletedSteps((prev) => ({ ...prev, [index]: !prev[index] }));
+  };
+
+  const toggleStrategyCompletion = (index) => {
+    setCompletedStrategies((prev) => ({ ...prev, [index]: !prev[index] }));
+  };
+
   return (
-    <div className="assesment-sections">
+    <div className="plan-wrapper">
       {/* HEADER SECTION */}
       <header>
         <ActionPlanHeader />
@@ -27,10 +38,10 @@ const PersonalizedActionPlan = ({ user }) => {
       {/* MAIN SECTION */}
       <main>
         {/* INTRO */}
-        <section className="intro">
+        <section className="plan-intro">
           <h1>Your Personalized Action Plan</h1>
           <p>
-            Welcome, <span id="username">{user?.username}</span>
+            Hello, <span className="user-name">{user?.username}</span>
           </p>
           <p>
             This plan is tailored to help you improve your mental health based on your recent self-assessment.
@@ -38,7 +49,7 @@ const PersonalizedActionPlan = ({ user }) => {
         </section>
 
         {/* PROFESSIONAL SUPPORT */}
-        <section className="professional-support">
+        <section className="support-section">
           <h2>Professional Support</h2>
           <p>
             If you need immediate support, please contact one of the following helplines:
@@ -62,28 +73,42 @@ const PersonalizedActionPlan = ({ user }) => {
         {/* IMPROVE MENTAL HEALTH SECTION */}
         <section className="improve-mental-health">
           <h2>Steps to Improve Your Mental Health</h2>
-          <ul>
+          <p>
+            These steps are designed to help you build a healthier mental state through practical and achievable actions:
+          </p>
+          <div className="steps-container">
             {cluster.mentalHealthSteps?.map((step, index) => (
-              <li key={index}>
-                <input type="checkbox" id={`step-${index}`} />
-                <label htmlFor={`step-${index}`}>{step}</label>
-              </li>
+              <div
+                key={index}
+                className={`step-card ${completedSteps[index] ? 'completed' : ''}`}
+                onClick={() => toggleStepCompletion(index)}
+              >
+                <span className="step-text">{step}</span>
+                <span className="step-icon">{completedSteps[index] ? '✅' : '⬜'}</span>
+              </div>
             ))}
-          </ul>
+          </div>
           <textarea placeholder="Journal your thoughts here..." id="journal"></textarea>
         </section>
 
         {/* SELF-HELP STRATEGIES */}
         <section className="self-help-strategies">
           <h2>Self-Help Strategies</h2>
-          <ul>
+          <p>
+            These strategies can be practiced independently to support your mental well-being:
+          </p>
+          <div className="strategies-container">
             {cluster.selfHelpStrategies?.map((strategy, index) => (
-              <li key={index}>
-                <input type="checkbox" id={`strategy-${index}`} />
-                <label htmlFor={`strategy-${index}`}>{strategy}</label>
-              </li>
+              <div
+                key={index}
+                className={`strategy-card ${completedStrategies[index] ? 'completed' : ''}`}
+                onClick={() => toggleStrategyCompletion(index)}
+              >
+                <span className="strategy-text">{strategy}</span>
+                <span className="strategy-icon">{completedStrategies[index] ? '✅' : '⬜'}</span>
+              </div>
             ))}
-          </ul>
+          </div>
         </section>
 
         {/* RECOMMENDED RESOURCES */}
@@ -100,8 +125,7 @@ const PersonalizedActionPlan = ({ user }) => {
         </section>
       </main>
 
-
-      <button>
+      <button className="save-button">
         Save
       </button>
 
