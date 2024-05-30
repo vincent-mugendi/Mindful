@@ -79,6 +79,12 @@
     transform: scaleX(1);
 }
 
+
+#active {
+    color: #618C64;
+    font-weight: 700;
+}
+
 @media (max-width: 768px) {
     .dashboard-nav {
         flex-direction: row;
