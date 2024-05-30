@@ -5,6 +5,9 @@ import { useLocation } from 'react-router-dom';
 import ActionPlanHeader from '../header/ActionPlanHeader';
 import { clusterData } from './cluster_data';
 
+import '../self-assessment/Assessment.css';
+import LandingFooter from '../landing/LandingFooter';
+
 const PersonalizedActionPlan = ({ user }) => {
   const location = useLocation();
   const { userCluster } = location.state || {};
@@ -15,7 +18,7 @@ const PersonalizedActionPlan = ({ user }) => {
   }
 
   return (
-    <>
+    <div className="assesment-sections">
       {/* HEADER SECTION */}
       <header>
         <ActionPlanHeader />
@@ -96,7 +99,15 @@ const PersonalizedActionPlan = ({ user }) => {
           </ul>
         </section>
       </main>
-    </>
+
+
+      <button>
+        Save
+      </button>
+
+      {/* FOOTER */}
+      <LandingFooter />
+    </div>
   );
 };
 

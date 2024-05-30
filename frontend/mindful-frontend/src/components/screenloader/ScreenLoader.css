@@ -1,0 +1,8 @@
+.loader {
+    font-size: 2em;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #0CC229;
+    text-align: center;
+    margin-top: 20%;
+    transition: all 0.1s ease;
+}

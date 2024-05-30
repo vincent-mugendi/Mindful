@@ -1,29 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
+import './Assessment.css';
+import arrowIcon from "../../assets/icons/arrow-green.svg";
+
 const AssessmentIntro = () => {
     return (
-        <>
-        <h3>INTRODUCTION</h3>
-        <p className="intro-msg">
-            Welcome to our Mental Health Self-Assessment Test. This tool is designed to help you gain a better understanding of your mental health and well-being. By answering the following questions, you can receive insights into potential mental health conditions, the severity of these conditions, and your overall mental health fitness.
+        <div className="assessment-sections">
+        <div className="section1">
+        <h3>Welcome to mindful Self Assessment Tool</h3>
+        <p>
+            Your responses are completely CONFIDENTIAL AND ANONYMOUS. Mindful does not collect any personally identifiable information, and your data will not be shared with any third parties.
         </p>
-        <h4>This self-assessment aims to:</h4>
-        <ul>
-            <li>Identify symptoms related to common mental disorders.</li>
-            <li>Assess the stage and severity of any identified conditions.</li>
-            <li>Evaluate your mental health fitness and coping mechanisms.</li>
-        </ul>
-        <br />
-        <br />
-        <h5>Your responses are completely confidential and anonymous. We do not collect any personally identifiable information, and your data will not be shared with any third parties.</h5>
+        </div>
 
-        <h4>PLEASE NOTE!!!</h4>
-        <h5>This self-assessment is not a diagnostic tool. It is intended for informational purposes only and should not be used as a substitute for professional diagnosis or treatment. If your results indicate a potential mental health issue, we strongly recommend consulting with a healthcare professional for a comprehensive evaluation and appropriate care.</h5>
-        
+        <div className="section2">
+            <h4>IMPORTANT NOTE</h4>
+            <p>This self-assessment is for informational purposes only. While it can provide insights, it's not a substitute for professional help. If your results raise concerns, please reach out to a healthcare professional for a proper evaluation.</p>
+        </div>
 
-        <Link to="/ps-section1"><button>NEXT</button></Link>
-        </>
+        <Link to="/ps-section1">
+            <button>
+                START
+                <img src={arrowIcon} alt="Arrow Icon" />
+            </button>
+        </Link>
+
+        </div>
     )
 }
 

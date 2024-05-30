@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import SelfAssesmentHeader from "../../header/SelfAssessmentHeader";
 import { useAssessment } from "../../../context/Assessmentcontext";
+import '../Assessment.css';
 
 const MdsSection2 = () => {
     const { updateAnswer } = useAssessment();
@@ -11,11 +12,9 @@ const MdsSection2 = () => {
     };
 
     return (
-        <>
+        <div className="assessment-sections">
             {/* HEADER */}
-            <div className="header">
                 <SelfAssesmentHeader />
-            </div>
 
             {/* SECTION 4 */}
             <h4>Anxiety Screening (GAD-7 Example)</h4>
@@ -70,7 +69,7 @@ const MdsSection2 = () => {
             </form>
 
             <Link to="/mds-section3"><button>NEXT</button></Link>
-        </>
+        </div>
     );
 };
 

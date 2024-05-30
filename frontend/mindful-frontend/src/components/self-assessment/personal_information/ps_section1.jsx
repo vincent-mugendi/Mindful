@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import SelfAssesmentHeader from "../../header/SelfAssessmentHeader";
 import { useAssessment } from "../../../context/Assessmentcontext";
 
+
+import '../Assessment.css';
+
 const PsSection1 = () => {
     const { updateAnswer } = useAssessment();
 
@@ -11,11 +14,9 @@ const PsSection1 = () => {
     };
 
     return (
-        <>
+        <div className="assessment-sections">
             {/* HEADER */}
-            <div className="header">
                 <SelfAssesmentHeader />
-            </div>
             
             {/* SECTION 1 */}
             <h4>Biographics</h4>
@@ -37,7 +38,7 @@ const PsSection1 = () => {
             </form>
 
             <Link to="/ps-section2"><button>NEXT</button></Link>
-        </>
+        </div>
     );
 };
 

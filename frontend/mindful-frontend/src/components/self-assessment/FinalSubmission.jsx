@@ -4,6 +4,9 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import { useAssessment } from '../../context/Assessmentcontext';
 
+import './Assessment.css';
+import SelfAssesmentHeader from "../header/SelfAssessmentHeader";
+
 const FinalSubmission = () => {
   const { answers, submitAnswers } = useAssessment();
   const [isLoading, setIsLoading] = useState(false);
@@ -45,14 +48,16 @@ const FinalSubmission = () => {
   }, [submissionError]);
 
   return (
-    <>
+    <div className="assessment-sections">
+      {/* Header */}
+      <SelfAssesmentHeader />
       <h4>Review Your Answers</h4>
       <pre>{JSON.stringify(answers, null, 2)}</pre>
       <button onClick={handleSubmit} disabled={isLoading}>
         {isLoading ? 'Submitting...' : 'Submit'}
       </button>
       {submissionError && <p className="error-message">{submissionError}</p>}
-    </>
+    </div>
   );
 };
 
