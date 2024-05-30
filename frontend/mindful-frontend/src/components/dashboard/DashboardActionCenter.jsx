@@ -9,7 +9,8 @@ const DashboardActionCenter = () => {
     return (
         <div className="action">
             <h1>Action Center</h1>
-            <p>Get a personalized Action Plan to improve your Mental health when you take mindful’s self-assessment test</p>
+            <p>Get a personalized Action Plan to improve your Mental health
+                <br />when you take mindful’s self-assessment test</p>
             <div className="assessment">
                 <Link to="/selfassessment">
                     <button className="btn">
